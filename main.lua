@@ -110,3 +110,20 @@ end
 
 -- MoveShip will be called over and over again
 Runtime:addEventListener("enterFrame", MoveCat1)
+
+-- Correct sound
+-- setting a variable to an mp3 file
+local correctSound = audio.loadSound("Sounds/bensound-straight.mp3")
+local correctSoundChannel
+
+correctSoundChannel = audio.play(correctSound)
+
+-- create the text abject at position (70, 100) with a size 50
+textObject = display.newText ("Animating Images!", 70, 100, nil, 50)
+
+--anchor the text object from the top left corner
+textObject.anchorX = 0
+textObject.anchorY = 0 
+
+-- set the colour of the text object
+textObject:setFillColor (100/255, 100/255, 255/255)
